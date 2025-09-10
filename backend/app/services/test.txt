@@ -1,0 +1,51 @@
+Global attention                                      Lobal attention
+
+Here are the key observations from the provided diagram:
+
+1.  **Overall Architecture:** The diagram illustrates a sequence-to-sequence model with an explicit "Attention Layer," commonly used in tasks like Neural Machine Translation or speech recognition.
+
+2.  **Encoder States (`h_s`):** The blue rectangles represent a series of hidden states (`h_s` with a bar) generated from an input sequence (likely by an encoder, indicated by the multiple upward input arrows at the bottom and the sequential right-pointing arrows). These states collectively store information about the entire source sequence.
+
+3.  **Decoder State (`h_t`):** The brown rectangles represent hidden states (`h_t`) from the target sequence (likely a decoder). `h_t` specifically refers to the current hidden state of the decoder.
+
+4.  **Attention Layer Inputs:** The "Attention Layer" takes two main types of inputs for each decoding step:
+    *   **All Source Hidden States (`h_s`):** All the blue `h_s` states.
+    *   **Current Decoder Hidden State (`h_t`):** The current brown `h_t` state.
+
+5.  **Global Alignment Weights (`a_t`):**
+    *   The current decoder state `h_t` is compared with *all* source hidden states `h_s` to compute `a_t` (Global align weights). The dashed lines from `h_s` to `a_t` and the solid line from `h_t` to `a_t` indicate this calculation.
+    *   `a_t` is a vector of weights, where each weight corresponds to the importance or relevance of a specific `h_s` state for generating the current target output.
+
+6.  **Context Vector (`c_t`):**
+    *   The "Global align weights" `a_t` are used to compute a weighted sum of the source hidden states `h_s`, resulting in the "Context vector" `c_t`. The lines from `h_s` converging into the node that produces `c_t`, along with the implied use of `a_t`, demonstrate this.
+    *   `c_t` is a dynamic summary of the most relevant information from the source sequence, specific to the current decoding step.
+
+7.  **Combined Hidden State (`~h_t`):**
+    *   The context vector `c_t` is then combined (e.g., concatenated or summed and transformed) with the current decoder hidden state `h_t` to produce a new, attention-enhanced hidden state, denoted as `~h_t` (tilde h_t). This enriches the decoder's understanding with relevant source information.
+
+8.  **Output Prediction (`y_t`):**
+    *   The final output `y_t` at the current timestep is predicted based on this combined, attention-aware hidden state `~h_t`.
+
+9.  **Sequential Processing:** Both the encoder states (`h_s`) and decoder states (`h_t`) are generated sequentially, as indicated by the right-pointing arrows between the rectangles. The attention mechanism operates at each decoding step (`t`).
+
+10. **Dynamic Focus:** The attention mechanism allows the decoder to dynamically focus on different parts of the source sequence at each step of generating the target sequence, rather than being limited to a single fixed-size context vector from the encoder.
+
+Here are the key observations from the provided diagram:
+
+1.  **Overall Architecture:** The diagram illustrates a sequence-to-sequence (Seq2Seq) model with an attention mechanism, likely for tasks like machine translation or speech recognition.
+2.  **Encoder-Decoder Structure:**
+    *   The blue rectangular boxes on the left (`$\bar{h}_s$`) represent hidden states of an **encoder** (e.g., a Bi-directional RNN or LSTM), which process the input sequence.
+    *   The brown rectangular boxes on the right (`$h_t$`) represent hidden states of a **decoder** (e.g., an RNN or LSTM), which generate the output sequence. The subscript 't' indicates the current decoding time step.
+3.  **Attention Layer:** A crucial component, highlighted by the dashed box, that connects the decoder to the encoder's output.
+    *   **Inputs to Attention:** The attention layer takes the current decoder hidden state (`$h_t$`) and all encoder hidden states (`$\bar{h}_s$`) as input.
+    *   **Output of Attention:** The primary output of the attention layer is the **Context vector** (`$c_t$`).
+4.  **Local Attention Mechanism:** The labels within the attention layer suggest a specific type of attention:
+    *   **Aligned Position (`$p_t$`):** The current decoder state (`$h_t$`) is used to predict an "aligned position" `$p_t$`. This hints at a *local attention* mechanism, where the attention is focused around a specific predicted alignment point in the source sequence, rather than attending globally over all source hidden states.
+    *   **Local Weights (`$a_t$`):** The "local weights" `$a_t$` are computed based on the current decoder state (`$h_t$`) and potentially the predicted aligned position (`$p_t$`). These weights determine the importance of each encoder hidden state. The dashed lines from `$p_t$` to `$a_t$` and from `$h_t$` to `$a_t$` reinforce this.
+    *   **Context Vector Calculation:** The context vector `$c_t$` is calculated as a weighted sum of the encoder hidden states (`$\bar{h}_s$`), where the weights are given by `$a_t$`.
+5.  **Output Generation:**
+    *   The context vector (`$c_t$`) from the attention layer is combined (e.g., concatenated and transformed) with the current decoder hidden state (`$h_t$`) to produce a new, enhanced decoder state (`$\tilde{h}_t$`, shown as a grey box).
+    *   This combined state (`$\tilde{h}_t$`) is then used to predict the output token `$y_t$` at time step `t`.
+6.  **Time Dependency:** The subscript 't' on `$h_t$`, `$p_t$`, `$a_t$`, `$c_t$`, `$\tilde{h}_t$`, and `$y_t$` indicates that these components are computed dynamically at each time step of the decoder. The encoder states `$\bar{h}_s$` are static once the input sequence is processed.
+
+This image displays an official admission result document, likely from a university in Vietnam, given the Vietnamese text and the "UET" logo, which often refers to the University of Engineering and Technology, a member of Vietnam National University.
