@@ -33,7 +33,7 @@ User Input → Supervisor Agent
 
 ```bash
 # Clone repo
-git clone https://github.com/nctrinh/Hust-Agentic-AI-Group-8.git
+git clone https://github.com/Datdajt03/Hust-Agentic-AI-Group-8.git
 cd Hust-Agentic-AI-Group-8
 
 # Tạo virtual environment
