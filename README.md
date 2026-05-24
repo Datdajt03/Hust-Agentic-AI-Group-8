@@ -3,7 +3,7 @@
 # 🤖 Hust-Agentic-AI-Group-8
 **Multi-Agent AI Study Assistant**
 
-[![HUST Summer School 2025](https://img.shields.io/badge/HUST_Summer_School-2025-b32024?style=for-the-badge&logo=academic-cap&logoColor=white)](#)
+[![HUST Summer School 2025](https://img.shields.io/badge/HUST_Summer_School-2025-b32024?style=for-the-badge&logo=academic-cap&logoColor=white)](https://soict.hust.edu.vn/summer-school-2025)
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](#)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-FF4F00?style=for-the-badge)](#)
 [![ChromaDB](https://img.shields.io/badge/Vector_DB-Chroma-4B0082?style=for-the-badge)](#)
