@@ -1,5 +1,8 @@
 # Hust-Agentic-AI-Group-8
 
+> **Đồ án Hè - Trường Hè HUST Summer School 2025**  
+> Dự án được phát triển bởi Nhóm 8 trong khuôn khổ chương trình đào tạo của trường hè.
+
 ## 📚 Multi-Agent AI Study Assistant
 
 Hệ thống trợ lý học tập AI sử dụng kiến trúc **Multi-Agent** với **LangGraph**, tự động phân tích tài liệu và hỗ trợ ôn tập thông minh.
