@@ -18,9 +18,9 @@ import chromadb
 
 # ── Persistent ChromaDB vectorstore ──────────────────────────────────
 _chroma_client = chromadb.CloudClient(
-    api_key='ck-13vQibxEbVCGid5fMaj4d5cUQdvND3nKxu3nwLBhB4xt',
-    tenant='aca727ff-a3d7-4d72-855d-88c471ec9d52',
-    database='husta8'
+    api_key=os.getenv('CHROMA_API_KEY'),
+    tenant=os.getenv('CHROMA_TENANT'),
+    database=os.getenv('CHROMA_DATABASE')
 )
 
 _vectorstore = Chroma(
