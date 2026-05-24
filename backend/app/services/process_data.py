@@ -115,5 +115,4 @@ def extract_content_as_string(input_path: str) -> str:
     parts = process_file(input_path)
     text_and_caption = "\n\n".join(parts)
     return text_and_caption
-
-print(extract_content_as_string(r"D:\Projects\HUST\backend\app\services\test.txt"))
+

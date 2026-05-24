@@ -6,3 +6,6 @@ __pycache__
 *.pyd
 *.pyw
 *.pyz
+chroma_db/
+output.json
+backend/app/services/test.*
